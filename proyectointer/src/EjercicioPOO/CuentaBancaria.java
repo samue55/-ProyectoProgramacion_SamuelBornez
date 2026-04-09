@@ -41,6 +41,30 @@ public class CuentaBancaria {
 	}
 
 
+	// metodo para ingresar dinero 
+	public void ingresar(double cantidad) {
+	if (cantidad > 0) {
+	saldo += cantidad;
+	}
+	}
+
+
+	// Metodo para retirar dinero
+	public boolean retirar(double cantidad) {
+	if (cantidad <= saldo) {
+	saldo -= cantidad;
+	return true;
+	} else {
+	return false;
+	}
+	}
+
+	@Override
+	public String toString() {
+	return "titular: " + titular + " | saldo: " + saldo + " €";
+	}
+}
+
 
 
 
